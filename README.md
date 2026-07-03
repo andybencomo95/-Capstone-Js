@@ -214,6 +214,5 @@ Este proyecto está bajo la Licencia MIT.
 
 ## 👨‍💻 Autor
 
-- **Nombre**: [Tu Nombre]
-- **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
-- **Email**: tu@email.com
+- Andy Bencomo Del Rio
+  
