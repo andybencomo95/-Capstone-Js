@@ -4,46 +4,46 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-connected-47a94b)](https://www.mongodb.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 GiftLink es una plataforma full-stack que permite a los usuarios descubrir, buscar y compartir ideas de regalos. La aplicación incluye autenticación de usuarios, búsqueda avanzada por categorías, y análisis de sentimientos para las descripciones de regalos.
 
-## 🎯 Requisitos Cumplidos
+## Requisitos Cumplidos
 
-### 2. GitHub Issue Template ✅
+### 2. GitHub Issue Template 
 - Carpeta `.github/ISSUE_TEMPLATE` con archivo `user-story.md`
 - 8 historias de usuario con etiquetas: nueva, nevera, deuda técnica, backlog
 
-### 3. MongoDB Import ✅
+### 3. MongoDB Import 
 - 16 documentos importados a MongoDB
 - Colecciones: gifts, users
 
-### 4. Conexión MongoDB ✅
+### 4. Conexión MongoDB 
 - Archivo `/models/db.js` con `await client.connect()`
 
-### 5. Gift Routes ✅
+### 5. Gift Routes 
 - `/routes/giftRoutes.js` con `connectToDatabase()`
 - Rutas: `/` → `/api/gifts`, `/:id` → `/api/gifts/:id`
 
-### 6. Search Routes ✅
+### 6. Search Routes 
 - `/routes/searchRoutes.js` con filtro por categoría
 
-### 7. App.js Search Route ✅
+### 7. App.js Search Route 
 - `/app.js` con ruta `/api/gifts/search`
 
-### 8. Sentiment Analysis ✅
+### 8. Sentiment Analysis 
 - `/sentiment/index.js` con import de `natural`
 
-### 9. Register Page ✅
+### 9. Register Page 
 - `/src/components/RegisterPage/RegisterPage.js` con method y headers en fetch
 
-### 10. Login Page ✅
+### 10. Login Page 
 - `/src/components/LoginPage/LoginPage.js` con headers Content-Type y Authorization
 
-### 11. Auth Routes ✅
+### 11. Auth Routes 
 - `/routes/authRoutes.js` con `collection.findOne()`
 
-### 12-17. Capturas de Pantalla ✅
+### 12-17. Capturas de Pantalla 
 - Landing Page con URL de deploy
 - Home Page (lista de regalos)
 - Página de registro
@@ -51,18 +51,17 @@ GiftLink es una plataforma full-stack que permite a los usuarios descubrir, busc
 - Detalles de regalo
 - Resultados de búsqueda
 
-### 18. CI/CD ✅
+### 18. CI/CD 
 - Pipeline ejecutado correctamente
 
-## 🚀 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 ### Backend
 - Node.js
 - Express.js
 - MongoDB
-- JWT (Autenticación)
-- bcryptjs (Encriptación)
-- natural (Análisis de sentimientos)
+- crypto de Node (tokens firmados y hash de contraseñas, sin dependencias externas)
+- Análisis de sentimientos propio (léxico integrado, sin dependencias)
 
 ### Frontend
 - React
@@ -74,7 +73,7 @@ GiftLink es una plataforma full-stack que permite a los usuarios descubrir, busc
 - Vercel (Deploy Frontend)
 - MongoDB Atlas
 
-## 📦 Instalación y Configuración
+## Instalación y Configuración
 
 ### Backend
 
@@ -103,7 +102,7 @@ npm install
 npm start
 ```
 
-## 🔌 Variables de Entorno
+## Variables de Entorno
 
 ```env
 # Backend
@@ -112,7 +111,7 @@ PORT=3000
 JWT_SECRET=tu_secreto_aqui
 ```
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 giftlink-backend/
@@ -140,7 +139,7 @@ giftlink-frontend/
 └── package.json
 ```
 
-## 🛣️ Endpoints de la API
+## Endpoints de la API
 
 ### Autenticación
 - `POST /api/auth/register` - Registrar usuario
@@ -157,7 +156,7 @@ giftlink-frontend/
 ### Búsqueda
 - `GET /api/gifts/search?category=electronics` - Buscar con filtros
 
-## 📸 Capturas de Pantalla
+## Capturas de Pantalla
 
 Las capturas de pantalla de todos los requerimientos están disponibles en la carpeta `screenshots/`:
 
@@ -179,13 +178,13 @@ Las capturas de pantalla de todos los requerimientos están disponibles en la ca
 16. [17-search-results.html](./screenshots/17-search-results.html)
 17. [18-cicd-pipeline.html](./screenshots/18-cicd-pipeline.html)
 
-## 🔗 URLs de Deploy
+## URLs de Deploy
 
 - **Frontend**: https://giftlink-frontend.vercel.app
 - **Backend**: https://giftlink-backend.herokuapp.com
 - **API Docs**: https://giftlink-backend.herokuapp.com/api-docs
 
-## 👥 Historias de Usuario
+## Historias de Usuario
 
 | ID | Título | Etiqueta | Prioridad |
 |----|--------|----------|-----------|
@@ -198,7 +197,7 @@ Las capturas de pantalla de todos los requerimientos están disponibles en la ca
 | US-007 | Optimización de Búsqueda | backlog | Baja |
 | US-008 | Exportar Datos | backlog | Baja |
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Backend
@@ -208,11 +207,11 @@ npm test
 npm test
 ```
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT.
 
-## 👨‍💻 Autor
+## Autor
 
 - Andy Bencomo Del Rio
   
