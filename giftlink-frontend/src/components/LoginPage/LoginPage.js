@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+
 const LoginPage = () => {
     const [credentials, setCredentials] = useState({
         email: '',
@@ -14,7 +16,7 @@ const LoginPage = () => {
         e.preventDefault();
         
         try {
-            const response = await fetch('http://localhost:3000/api/auth/login', {
+            const response = await fetch(`${API_URL}/api/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -29,7 +31,7 @@ const LoginPage = () => {
                 localStorage.setItem('token', data.token);
                 
                 // Hacer petición autenticada
-                const userResponse = await fetch('http://localhost:3000/api/auth/me', {
+                const userResponse = await fetch(`${API_URL}/api/auth/me`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${data.token}`
