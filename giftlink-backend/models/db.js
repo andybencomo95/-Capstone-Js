@@ -10,7 +10,7 @@ async function connectToDatabase() {
     
     try {
         await client.connect();
-        console.log('✓ Conectado exitosamente a MongoDB');
+        console.log('Conectado a MongoDB');
         
         db = client.db('giftlink');
         return db;
